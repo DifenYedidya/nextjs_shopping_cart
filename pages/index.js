@@ -1,21 +1,8 @@
-import Head from 'next/head'
-import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Head>
-        <title>NextJs Shopping Cart</title>
-        <meta name="description" content="next shopping cart" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className={styles.header}>
-        <Link href="/">Home</Link>
-        <Link href="/store">Store</Link>
-        <Link href="/shoppingCart">Shopping Cart</Link>
-        <div>Logout</div>
-      </div>
       <div className={styles.main}>
         <div>
           Name: 
