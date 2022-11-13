@@ -14,17 +14,6 @@ a {
     box-sizing: border-box;
 }
 
-.button {
-    background-color: white;
-    border-color: blue;
-    color: blue;
-    font-weight: 600;
-    width: fit-content;
-    padding: 1rem 8rem;
-    justify-content: center;
-    align-items: center;
-}
-
 @media (prefers-color-scheme: light) {
     html {
         color-scheme: light;

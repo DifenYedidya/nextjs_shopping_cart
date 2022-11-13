@@ -1,3 +1,4 @@
+import LongButton from '../components/buttons/button'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -20,8 +21,7 @@ export default function Home() {
           Address: 
           {/* <a>{{address}}</a> */}
         </div>
-        
-        <button className='button'>Fill out your identity</button>
+        <LongButton text="Please fill out the form"/>
       </div>
     </div>
   )
