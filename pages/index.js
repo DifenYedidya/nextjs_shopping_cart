@@ -1,4 +1,4 @@
-import LongButton from '../components/buttons/button'
+import ModalForm from '../components/modals/modalForm'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -21,7 +21,7 @@ export default function Home() {
           Address: 
           {/* <a>{{address}}</a> */}
         </div>
-        <LongButton text="Please fill out the form"/>
+        <ModalForm/>
       </div>
     </div>
   )

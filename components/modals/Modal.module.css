@@ -1,0 +1,10 @@
+.longButton {
+    background-color: white;
+    border-color: blue;
+    color: blue;
+    font-weight: 600;
+    min-width: fit-content;
+    padding: 1rem 8rem;
+    justify-content: center;
+    align-items: center;
+}
