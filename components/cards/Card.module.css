@@ -8,23 +8,20 @@
     margin: 0 -5px;
 }
 
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 12px;
     padding: 8px;
     text-align: center;
     background-color: #f1f1f1;
+    min-width: max-content;
 }
 
-@media screen and (max-width: 720px) {
+/* .image {} */
+
+@media screen and (max-width: 840px) {
     .column {
-        width: 100%;
+        width: 50%;
         display: block;
         margin-bottom: 20px;
     }
