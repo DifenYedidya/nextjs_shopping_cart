@@ -1,9 +1,9 @@
 import styles from '../buttons/Button.module.css'
 
-export default function LongButton({text}) {
+export default function LongButton({text, toSomewhere}) {
     return(
         <>
-            <button className={styles.longButton}>{text}</button>
+            <button onClick={toSomewhere} className={styles.longButton}>{text}</button>
         </>
     )
 }

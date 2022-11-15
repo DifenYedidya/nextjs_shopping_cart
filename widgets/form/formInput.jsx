@@ -1,4 +1,6 @@
-export default function Form() {
+import styles from '../form/FormInput.module.css'
+
+export default function FormInput() {
     <form className={styles.form} action="/send-data-here" method="post">
         <div>
           <label for="name">Name:</label>
@@ -16,6 +18,6 @@ export default function Form() {
           <label for="address">Address:</label>
           <input type="text" id="address" name="address" placeholder='input your address' required />
         </div>
-        <button className='button' type="submit">Save</button>
+        <button className={styles.longButton} type="submit">Save</button>
     </form>
 }
