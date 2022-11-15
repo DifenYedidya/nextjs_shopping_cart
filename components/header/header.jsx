@@ -1,8 +1,13 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../header/Header.module.css'
+import { useAuth } from '../../pages/auth/auth.jsx'
+import RequiredAuth from '../requiredAuth/requiredAuth'
 
 export default function Header() {
+
+    const auth = useAuth()
+
     return(
         <>
             <Head>
@@ -13,8 +18,16 @@ export default function Header() {
             <div className={styles.header}>
                 <Link href="/" replace>Home</Link>
                 <Link href="/storelist/storelist" replace>Store</Link>
-                <Link href="/cart/cart" replace>Shopping Cart</Link>
-                <Link href="/login/login" replace>Logout</Link>
+                <Link href="/cart/cart" replace>
+                    {/* <RequiredAuth> */}
+                        Shopping Cart
+                    {/* </RequiredAuth> */}
+                </Link>
+                {!auth.user && (
+                    <Link href="/login/login" replace>
+                        Login
+                    </Link>
+                )}
             </div>
         </>
     )

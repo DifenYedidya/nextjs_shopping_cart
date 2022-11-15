@@ -1,13 +1,22 @@
 import ModalForm from '../components/modals/modalForm'
 import styles from '../styles/Home.module.css'
+import { useAuth } from './auth/auth'
+import { useRouter } from 'next/router'
 
 export default function Home() {
+  const auth = useAuth()
+  const router = useRouter()
+
+  const handleLogout = () => {
+    auth.logout()
+    router.push('/')
+  }
+
   return (
     <div className={styles.container}>
       <div className={styles.main}>
         <div>
-          Name: 
-          {/* <a>{{name}}</a> */}
+          Name: {auth.user}
         </div>
         <div>
           Email: 
@@ -22,6 +31,7 @@ export default function Home() {
           {/* <a>{{address}}</a> */}
         </div>
         <ModalForm/>
+        <button className='button logoutButton' onClick={handleLogout}>Logout</button>
       </div>
     </div>
   )
