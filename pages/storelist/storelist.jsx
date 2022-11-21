@@ -2,17 +2,17 @@ import Card from "../../components/cards/card";
 import style from '../storelist/Storelist.module.css'
 
 export const getStaticProps = async () => {
-    const res = await fetch('https://swapi.dev/api/films/');
+    const res = await fetch('https://dummyjson.com/products');
     return {
-        props: { films: (await res.json()).results }
+        props: { products: (await res.json()).products }
     }
 }
 
-export default function Storelist({ films }) {
+export default function Storelist({ products }) {
     return(
         <div className={style.cards}>
-            {films.map((film) => (
-                <Card key={film.episode_id} film={film}/>
+            {products.map((product) => (
+                <Card key={product.id} product={product}/>
             ))}
         </div>
     )

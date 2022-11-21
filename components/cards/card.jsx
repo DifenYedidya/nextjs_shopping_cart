@@ -1,21 +1,21 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import style from '../cards/Card.module.css';
-import vercel from '../../public/vercel.svg'
+import Link from 'next/link'
 
-const Card = ({ film }) => {
+const Card = ({ product }) => {
     return(
-        <div className={style.card}>   
-            <h3>{film.title}</h3>
-            <Image
+        <Link href={`/details/` + product.id} className={style.card}>   
+            <h3>{product.title}</h3>
+            {/* <Image
                 className={style.image}
-                src={vercel}
-                alt="FilmThumbnail"
+                src={product.images}
+                alt="productThumbnail"
                 width={160}
                 height={160}
-            />
-            <h4>Director: {film.director}</h4>
-            <h5>Released: {film.release_date}</h5>
-        </div>
+            /> */}
+            <h4>Price: {product.price}</h4>
+            <h4>Stock: {product.stock}</h4>
+        </Link>
     )
 }
 

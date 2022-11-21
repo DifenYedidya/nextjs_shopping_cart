@@ -17,12 +17,9 @@ export default function Header() {
             </Head>
             <div className={styles.header}>
                 <Link href="/" replace>Home</Link>
-                <Link href="/storelist/storelist" replace>Store</Link>
-                <Link href="/cart/cart" replace>
                     {/* <RequiredAuth> */}
-                        Shopping Cart
+                <Link href="/storelist/storelist" replace>Store</Link>
                     {/* </RequiredAuth> */}
-                </Link>
                 {!auth.user && (
                     <Link href="/login/login" replace>
                         Login
